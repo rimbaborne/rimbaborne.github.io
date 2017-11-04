@@ -7621,3 +7621,17 @@ ol ol li {
   .col-4-width {
     width: 100%; } }
 
+
+    /* -- modofication -- */
+
+.form-login-regis {
+  padding-bottom: 25px;
+}
+
+.content-login-regis {
+  padding: 35px 25px;
+}
+
+.row-login-regis {
+  padding-top: 30px;
+}
