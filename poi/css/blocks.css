@@ -779,7 +779,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
     color: #38a9ff; }
 
 .search-form {
-  padding: 50px 40px;
+  padding: 5px 5px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1); }
