@@ -11,7 +11,7 @@
   right: 0;
   z-index: 21; }
   .header .page-title {
-    padding: 26px 50px 26px 100px;
+    padding: 0px 0px 26px 0px;
     text-transform: uppercase;
     float: left;
     height: 100%;
@@ -43,7 +43,7 @@
   background-color: #494c62;
   position: relative; }
   .search-bar.w-search {
-    width: 500px;
+    width: 700px;
     min-height: 70px;
     background-color: #494c62; }
   .search-bar .form-group {
