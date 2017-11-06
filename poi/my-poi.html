@@ -837,11 +837,11 @@
 							<div class="form-group label-floating">
 								<label class="control-label">What place you share today ?</label>
 								<input class="form-control bg-white" placeholder="">
-								<span class="material-input"></span></div>
+								<span class="material-input"></span>
+								</div>
 
-								<button class="btn btn-primary btn-lg"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+								<a href="#"  class="btn btn-primary btn-lg" data-toggle="modal" data-target="#create-poi"><i class="fa fa-chevron-right" aria-hidden="true" ></i></a>
 							</form>
-
 						</div>
 				</div>
 
@@ -891,7 +891,6 @@
 										<div class="row">
 											<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
 												<div class="photo-album-wrapper">
-
 													<div class="photo-album-item-wrap col-3-width">
 														<div class="photo-album-item" data-mh="album-item">
 															<div class="photo-item">
@@ -909,7 +908,6 @@
 															<a href="#" class="post-category bg-blue-light">APPROVED</a>
 																<a href="#" class="title h5">South America Vacations</a>
 																<span class="sub-title">Last Added: 2 hours ago</span>
-																
 																
 															</div>
 
@@ -1446,7 +1444,6 @@
 		</div>
 	</div>
 
-
 	<!-- ... end Window-popup Update Header Photo -->
 
 
@@ -1755,7 +1752,7 @@
 
 		</div>
 	</div>
-<!-- Window-popup Open Photo Popup V2 -->
+	<!-- Window-popup Open Photo Popup V2 -->
 
 
 	<!-- Window-popup Choose from my Photo -->
@@ -1938,6 +1935,59 @@
 	</div>
 
 	<!-- ... end Window-popup Choose from my Photo -->
+
+
+<!-- Window-popup Create Event -->
+<div class="modal fade" id="create-poi">
+	<div class="modal-dialog ui-block window-popup create-event">
+		<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
+			<svg class="olymp-close-icon"><use xlink:href="icons/icons.svg#olymp-close-icon"></use></svg>
+		</a>
+
+		<div class="ui-block-title">
+			<h6 class="title">Create Point Of Interest</h6>
+		</div>
+
+		<div class="ui-block-content">
+			
+
+			<div class="form-group label-floating">
+				<label class="control-label">Name</label>
+				<input class="form-control" placeholder="" value="Labuan Bajo" type="text">
+			</div>
+
+			<div class="form-group label-floating is-select">
+				<label class="control-label">Categori</label>
+				<select class="selectpicker form-control">
+					<option >Choose..</option>
+					<option value="MA">Mountain</option>
+					<option value="FE">Beach</option>
+				</select>
+			</div>
+
+			<div class="form-group label-floating">
+				<label class="control-label">POI Description</label>
+					<textarea class="form-control" placeholder="">
+					</textarea>
+			</div>
+
+			<div class="form-group label-floating is-empty">
+				<label class="control-label">Price</label>
+				<input class="form-control" placeholder="" value="" type="text">
+				 </div>
+
+			
+			
+
+			
+			<button class="btn btn-breez btn-lg full-width">Create Event</button>
+
+		</div>
+
+	</div>
+</div>
+<!-- ... end Window-popup Create Event -->
+
 
 
 	<!-- jQuery first, then Other JS. -->
