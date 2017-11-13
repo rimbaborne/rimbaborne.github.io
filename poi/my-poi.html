@@ -41,9 +41,10 @@
 	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-select.css">
 
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-growl/1.0.0/jquery.bootstrap-growl.min.js"></script>
+
 </head>
 <body>
-
 
 
 
@@ -664,17 +665,6 @@
 											<a href="setting-profile.html">Setting</a>
 										</li>
 										<li>
-											<div class="more">
-												<svg class="olymp-three-dots-icon"><use xlink:href="icons/icons.svg#olymp-three-dots-icon"></use></svg>
-												<ul class="more-dropdown more-with-triangle">
-													<li>
-														<a href="#">Report Profile</a>
-													</li>
-													<li>
-														<a href="#">Block Profile</a>
-													</li>
-												</ul>
-											</div>
 										</li>
 									</ul>
 								</div>
@@ -693,7 +683,7 @@
 											<a href="#" data-toggle="modal" data-target="#update-header-photo">Update Header Photo</a>
 										</li>
 										<li>
-											<a href="29-YourAccount-AccountSettings.html">Account Settings</a>
+											<a href="#">Share Profile</a>
 										</li>
 									</ul>
 								</div>
@@ -721,6 +711,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-8 order-xl-2 col-lg-8 order-lg-2 col-md-12 order-md-1 col-sm-12 col-xs-12">
+
 				<div class="ui-block">
 					<div class="news-feed-form">
 						<!-- Nav tabs -->
@@ -1653,7 +1644,7 @@
 												</div>
 											</div>
 											<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-												<button class="btn btn-breez full-width " data-toggle="tab" href="#create-3"  aria-expanded="false">Next</button>
+												<button class="success btn btn-breez full-width " data-toggle="tab" href="#create-3"  aria-expanded="false">Next</button>
 											</div>
 										</div>
 									</div>
@@ -1695,7 +1686,7 @@
 												</div>
 											</div>
 											<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-												<button class="btn btn-breez full-width " data-toggle="tab" href="#"  aria-expanded="false">Submit</button>
+												<button href="#" type="button" class="btn btn-breez full-width" data-dismiss="modal" aria-expanded="close" >Submit</button>
 											</div>
 										</div>
 									</div>
@@ -1703,9 +1694,7 @@
 							</div>
 						</div>
 					</div>
-
 				</div>
-
 			</div>
 
 		</div>
@@ -1782,13 +1771,10 @@
 												<div class="more"><svg class="olymp-three-dots-icon"><use xlink:href="icons/icons.svg#olymp-three-dots-icon"></use></svg>
 													<ul class="more-dropdown">
 														<li>
-															<a href="#">Edit Post</a>
+															<a href="#">Edit POI</a>
 														</li>
 														<li>
-															<a href="#">Delete Post</a>
-														</li>
-														<li>
-															<a href="#">Turn Off Notifications</a>
+															<a href="#">Delete POI</a>
 														</li>
 														<li>
 															<a href="#">Select as Featured</a>
@@ -2140,7 +2126,7 @@
 												</div>
 											</div>
 											<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-												<button class="btn btn-breez full-width " data-toggle="tab" href="#"  aria-expanded="false">Submit</button>
+												<button class="btn btn-breez full-width " data-dismiss="modal" href="#"  aria-expanded="false">Submit</button>
 											</div>
 										</div>
 									</div>
@@ -2156,6 +2142,8 @@
 		</div>
 	</div>
 	<!-- ... end Window-popup Create Event -->
+
+
 
 
 	<!-- jQuery first, then Other JS. -->
@@ -2178,6 +2166,10 @@
 
 	<script src="js/mediaelement-and-player.min.js"></script>
 	<script src="js/mediaelement-playlist-plugin.min.js"></script>
+
+
+
+	
 
 	<script type="text/javascript">
 		$( document ).on( 'click', '.btn-add', function ( event ) {
@@ -2202,6 +2194,16 @@
 			$(this).closest( '.form-group' ).remove();
 		} );
 	</script>
+
+	<script type="text/javascript">
+		$('.btn').on('click', function() {
+		    var $this = $(this);
+		  $this.button('loading');
+		    setTimeout(function() {
+		       $this.button('reset');
+		   }, 8000);
+		});
+    </script>
 
 </body>
 </html>
