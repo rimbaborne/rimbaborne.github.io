@@ -32,24 +32,11 @@
 		.jarak {
 			padding: 0px;
 		}
-		.geser:hover::before {
-			background: rgba(0, 0, 0, 0.05);
-			border-radius: 8px;
-			content: " " !important;
-			height: 100%;
-			left: 0;
-			opacity: 0;
-			pointer-events: none;
-			position: absolute;
-			top: 0;
-			-webkit-transform: scale(0.96);
-			transform: scale(0.96);
-			width: 100%;
-			z-index: 3; }
-		.geser:hover {
-				-webkit-animation: tapAnimation 0.25s cubic-bezier(0.31, 1, 0.34, 1) forwards;
-				animation: tapAnimation 0.25s cubic-bezier(0.31, 1, 0.34, 1) forwards; }
-			</style>
+
+		.bayangan:hover {
+			box-shadow: 0 0 15px rgba(33,33,33,.2);
+		}
+		</style>
 
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
 
@@ -94,7 +81,7 @@
 	<div class="stunning-header-content">
 		<h1 class="stunning-header-title">Travelling Indonesia</h1>
 		<ul class="breadcrumbs">
-			<span>earn point, collect benefit.</span>
+			<span>earn points, collect benefits.</span>
 		</ul>
 	</div>
 
@@ -152,15 +139,15 @@
 	<div class="container">
 		<div class="row sorting-container" id="posts-grid-1" data-layout="masonry">
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 sorting-item">
-				<div class="ui-block">
-					<article class="hentry blog-post blog-post-v2 geser" style="box-shadow: 0 1px 2px rgba(25,25,25,0.2);">
+				<div class="ui-block bayangan">
+
+					<article class="hentry blog-post blog-post-v2" style="box-shadow: 0 1px 2px rgba(25,25,25,0.2);">
+					<a href="#">
 						<div class="post-thumb">
 							<img src="img/open-photo2-2.jpg" alt="photo">
 						</div>
 						<div class="post-content" style="padding: 5px 10px 10px 10px">
 							<a href="#" class="h4 post-title">Gunung Bromo </a>
-
-
 							<div class="post__author author vcard inline-items" style="margin-bottom: 10px;">
 								<div class="author-date not-uppercase">
 									<a class="h6 post__author-name fn" href="#">Nadine C.</a>
@@ -171,13 +158,10 @@
 									</div>
 								</div>
 							</div>
-
 							<div class="">
 								<a href="#" class="post-category bg-smoke" style="margin-bottom: 5px;">Mountain</a>
 								<a href="#" class="post-category bg-smoke" style="margin-bottom: 5px;">Asian</a>
 							</div>
-							
-
 							<div class="post-additional-info inline-items" style="margin-top: 0px; display: flow-root; padding-top: 5px;">
 
 								<div class="comments-shared" style="margin-left: 0px">
@@ -193,11 +177,12 @@
 
 							</div>
 						</div>
+						</a>
 					</article>
 				</div>
 			</div>
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 sorting-item">
-				<div class="ui-block">
+				<div class="ui-block bayangan">
 					<article class="hentry blog-post blog-post-v2" style="box-shadow: 0 1px 2px rgba(25,25,25,0.2);">
 						<div class="post-thumb">
 							<img src="img/derawan.jpg" alt="photo">
@@ -216,14 +201,10 @@
 									</div>
 								</div>
 							</div>
-
 							<div class="">
 								<a href="#" class="post-category bg-smoke" style="margin-bottom: 5px;">Beach</a>
 							</div>
-							
-
 							<div class="post-additional-info inline-items" style="margin-top: 0px; display: flow-root; padding-top: 5px;">
-
 								<div class="comments-shared" style="margin-left: 0px">
 									<a href="#" class="post-add-icon inline-items">
 										<svg class="olymp-star-icon"><use xlink:href="icons/icons.svg#olymp-star-icon"></use></svg>
@@ -234,22 +215,19 @@
 										<span>12</span>
 									</a>
 								</div>
-
 							</div>
 						</div>
 					</article>
 				</div>
 			</div>
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 sorting-item">
-				<div class="ui-block">
+				<div class="ui-block bayangan">
 					<article class="hentry blog-post blog-post-v2" style="box-shadow: 0 1px 2px rgba(25,25,25,0.2);">
 						<div class="post-thumb">
 							<img src="img/bajo.jpg" alt="photo">
 						</div>
 						<div class="post-content" style="padding: 5px 10px 10px 10px">
 							<a href="#" class="h4 post-title">Labuan Bajo </a>
-
-
 							<div class="post__author author vcard inline-items" style="margin-bottom: 10px;">
 								<div class="author-date not-uppercase">
 									<a class="h6 post__author-name fn" href="#">Hermawan</a>
@@ -260,12 +238,9 @@
 									</div>
 								</div>
 							</div>
-
 							<div class="">
 								<a href="#" class="post-category bg-smoke" style="margin-bottom: 5px;">Beach</a>
 							</div>
-							
-
 							<div class="post-additional-info inline-items" style="margin-top: 0px; display: flow-root; padding-top: 5px;">
 
 								<div class="comments-shared" style="margin-left: 0px">
@@ -285,7 +260,7 @@
 				</div>
 			</div>
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 sorting-item">
-				<div class="ui-block">
+				<div class="ui-block bayangan">
 					<article class="hentry blog-post blog-post-v2" style="box-shadow: 0 1px 2px rgba(25,25,25,0.2);">
 						<div class="post-thumb">
 							<img src="img/belitung.jpg" alt="photo">
@@ -329,7 +304,7 @@
 				</div>
 			</div>
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 sorting-item">
-				<div class="ui-block">
+				<div class="ui-block bayangan">
 					<article class="hentry blog-post blog-post-v2" style="box-shadow: 0 1px 2px rgba(25,25,25,0.2);">
 						<div class="post-thumb">
 							<img src="img/jogja.jpg" alt="photo">
@@ -373,7 +348,7 @@
 				</div>
 			</div>
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 sorting-item">
-				<div class="ui-block">
+				<div class="ui-block bayangan">
 					<article class="hentry blog-post blog-post-v2" style="box-shadow: 0 1px 2px rgba(25,25,25,0.2);">
 						<div class="post-thumb">
 							<img src="img/slide-2.jpg" alt="photo">
@@ -418,7 +393,7 @@
 				</div>
 			</div>
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 sorting-item">
-				<div class="ui-block">
+				<div class="ui-block bayangan">
 					<article class="hentry blog-post blog-post-v2" style="box-shadow: 0 1px 2px rgba(25,25,25,0.2);">
 						<div class="post-thumb">
 							<img src="img/slide-4.jpg" alt="photo">
@@ -463,7 +438,7 @@
 				</div>
 			</div>
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 sorting-item">
-				<div class="ui-block">
+				<div class="ui-block bayangan">
 					<article class="hentry blog-post blog-post-v2" style="box-shadow: 0 1px 2px rgba(25,25,25,0.2);">
 						<div class="post-thumb">
 							<img src="img/slide-3.jpg" alt="photo">
@@ -549,7 +524,15 @@
 						<label class="control-label">Your Password</label>
 						<input class="form-control" placeholder="" type="password">
 					</div>
-
+					<div class="remember">
+						<div class="checkbox">
+							<label>
+								<input name="optionsCheckboxes" type="checkbox">
+								Remember Me
+							</label>
+						</div>
+						<a href="#" class="forgot">Forgot my Password</a>
+					</div>
 					<a href="my-poi.html" class="btn btn-primary btn-lg full-width">Login</a>
 				</div>
 			</div>
@@ -583,6 +566,7 @@
 					</div>
 
 					<a href="loading.html" class="btn btn-purple btn-lg full-width">Complete Registration!</a>
+					By registering, you agree to the Terms of Service and Privacy Policy.
 				</div>
 			</div>
 		</div>
