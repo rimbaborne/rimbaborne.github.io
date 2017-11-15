@@ -4261,7 +4261,7 @@ ol ol li {
     .post-additional-info > *:last-child {
       margin-right: 0; }
   .post-additional-info .comments-shared {
-    float: right;
+    /*float: right;*/
     margin-top: 8px; }
 
 .comments-shared > * {
@@ -5872,7 +5872,7 @@ ol ol li {
     display: block;
     font-size: 11px; }
   .blog-post-v2 .author-date {
-    text-align: left; }
+    text-align: center; }
   .blog-post-v2 .post__author-name {
     margin-bottom: 0; }
   .blog-post-v2 .post-additional-info {
@@ -7164,7 +7164,7 @@ ol ol li {
   display: table; }
 
 .inline-items > * {
-  display: inline-block;
+  /*display: inline-block;*/
   vertical-align: middle; }
 
 .table-cell {
