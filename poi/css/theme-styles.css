@@ -102,6 +102,75 @@
     width: 20px;
     height: 20px; }
 
+.search-bar2 {
+  float: left;
+  width: 500px;
+  height: 50px;
+  /* background-color: #494c62; */
+  position: relative;
+  background-color: transparent;
+  border: 1px solid #e6ecf5;
+  border-radius: 0.25rem; }
+  .search-bar2.w-search {
+    width: 700px;
+    min-height: 50px;
+    background-color: #494c62; }
+  .search-bar2 .form-group {
+    margin-bottom: 0;
+    height: 50px; }
+  .search-bar2 .form-control {
+    border: none;
+    padding: 0; }
+  .search-bar2 .selectize-control {
+    position: relative;
+    z-index: 20;
+    height: 50px; }
+  .search-bar2 .selectize-dropdown {
+    background-color: #fff;
+    z-index: 50;
+    border: 1px solid #e6ecf5;
+    box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1); }
+  .search-bar2 .selectize-input {
+    height: 50px; }
+    .search-bar2 .selectize-input.has-items input {
+      background-color: transparent; }
+    .search-bar2 .selectize-input.has-items > * {
+      padding: 3px 10px;
+      border-radius: 3px;
+      background-color: #9a9fbf;
+      color: #fff;
+      display: inline-block;
+      margin-right: 3px; }
+      .search-bar2 .selectize-input.has-items > *:first-child {
+        margin-left: 15px; }
+  .search-bar2 .form-group.with-button button {
+    color: #696d87;
+    fill: #696d87;
+    background-color: #494c62;
+    width: 50px; }
+    .search-bar2 .form-group.with-button button svg {
+      height: 22px;
+      width: 22px; }
+  .search-bar2 .form-group.with-button input {
+    height: 100%;
+    border: none;
+    color: #9a9fbf; }
+  .search-bar2 .notification-list {
+    position: absolute;
+    top: -100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease;
+    z-index: 50;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
+    border-right: 1px solid #e6ecf5;
+    border-left: 1px solid #e6ecf5; }
+  .search-bar2 .notification-list .notification-icon svg {
+    width: 20px;
+    height: 20px; }
+
 .control-block {
   float: right;
   height: 100%;

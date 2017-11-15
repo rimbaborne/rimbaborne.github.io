@@ -286,6 +286,9 @@ button:hover {
 .btn-smoke {
   background-color: #e6ecf5; }
 
+.btn-hastag {
+  background-color: #a7b6cc; }
+
 .btn-bg-secondary {
   background-color: #3f4257; }
 
@@ -5876,6 +5879,8 @@ ol ol li {
     display: inline-block; }
     .blog-post-v2 .post-additional-info .comments-shared {
       margin-left: 20px; }
+      .blog-post-v2 .post-additional-info .comments-shared2 {
+      margin-left: 0px; }
 
 .single-post-v2 {
   padding: 70px 60px;
@@ -7285,6 +7290,9 @@ ol ol li {
 
 .bg-smoke {
   background-color: #e6ecf5; }
+
+.bg-hashtag {
+  background-color: #a7b6cc; }
 
 .bg-smoke-light {
   background-color: #fafbfd; }
