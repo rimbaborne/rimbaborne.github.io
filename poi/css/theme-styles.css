@@ -137,8 +137,8 @@
     .search-bar2 .selectize-input.has-items > * {
       padding: 3px 10px;
       border-radius: 3px;
-      background-color: #9a9fbf;
-      color: #fff;
+      /*background-color: #9a9fbf;*/
+      color: #444444;
       display: inline-block;
       margin-right: 3px; }
       .search-bar2 .selectize-input.has-items > *:first-child {

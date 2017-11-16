@@ -50,7 +50,7 @@ var CRUMINA = {};
     CRUMINA.TopSearch = function () {
         $('.js-user-search').selectize({
             persist: false,
-            maxItems: 2,
+            maxItems: 1,
             valueField: 'name',
             labelField: 'name',
             searchField: ['name'],
@@ -64,7 +64,7 @@ var CRUMINA = {};
             ],
             render: {
                 option: function(item, escape) {
-                    return '<div class="inline-items">' +
+                    return '<div class="inline-items"><a href="oke.com">' +
                         (item.image ? '<div class="author-thumb"><img src="' + escape(item.image) + '" alt="avatar"></div>' : '') +
 							'<div class="notification-event">' +
                         		(item.name ? '<span class="h6"></a>' + escape(item.name) + '</span>' : '') +
