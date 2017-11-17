@@ -41,6 +41,17 @@
 	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-select.css">
 
+	 <!-- Include Editor style. -->
+	<link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/css/froala_editor.min.css' rel='stylesheet' type='text/css' />
+	<link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/css/froala_style.min.css' rel='stylesheet' type='text/css' />
+
+
+
+
+ 
+
+
+
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-growl/1.0.0/jquery.bootstrap-growl.min.js"></script>
 
 </head>
@@ -711,21 +722,79 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-8 order-xl-2 col-lg-8 order-lg-2 col-md-12 order-md-1 col-sm-12 col-xs-12">
-
-				<div class="ui-block">
-					<div class="news-feed-form">
-						<!-- Nav tabs -->
-						<form class="form-inline search-form" method="post">
-							<div class="form-group label-floating">
-								<label class="control-label">Add POI name here ...  </label>
-								<input class="form-control bg-white" placeholder="">
-								<span class="material-input"></span>
+				<div class="ui-block" style="padding: 20px;">
+						<div class="form-group label-floating"  style="margin-bottom: 0.5rem;">
+							<label class="control-label">Name Poi Post</label>
+							<input class="form-control" placeholder="" type="text">
+						</div>
+						<div id="froala-editor" style="border: 1px solid #e6ecf5;">
+						<p>Write Story...</p>
+						</div>
+						<div class="row" style="padding-top: 10px;">
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<div class="form-group label-floating"  style="margin-bottom: 0.5rem;">
+									<label class="control-label">Address</label>
+									<input class="form-control" placeholder="" type="text">
+								</div>
 							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<div class="form-group label-floating is-select">
+									<label class="control-label">Povince</label>
+									<select class="selectpicker form-control">
+										<option >Choose..</option>
+										<option value="MA">Jawa Barat</option>
+										<option value="FE">Jawa Tengah</option>
+										<option value="FE">Jawa Timur</option>
+										<option value="FE">Nusa Tenggara Barat</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<div class="form-group label-floating is-select">
+									<label class="control-label">City</label>
+									<select class="selectpicker form-control">
+										<option >Choose..</option>
+										<option value="MA">Bandung</option>
+										<option value="FE">Surabaya</option>
+										<option value="FE">Jakarta Pusat</option>
+										<option value="FE">Lombok</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<h5>Main Picture</h5>
+								<div class="form-group with-icon ">
+									<input class="form-control" type="file" >
+									<i class="fa fa-camera " aria-hidden="true"></i>
+								</div>
 
-							<a href="#"  class="btn btn-primary btn-lg" data-toggle="modal" data-target="#create-poi">Submit POI</a>
-						</form>
-					</div>
+								<h5>Gallery</h5>
+								<div class="form-group with-icon is-empty">
+									<input class="form-control" type="file" name="multiple[]">
+									<i aria-hidden="true">
+										<span class="btn btn-success btn-add full-width" type="button" style="margin: 0px">
+											<span class="fa fa-plus"></span>
+										</span>
+									</i>
+								</div>
+							</div>
+						</div>
+
+						<div class="row" style="padding-top: 20px">
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"></div>
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"></div>
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<div class="pull-right">
+									<button class="btn btn-grey-light btn-sm"><center>Save Draft</center></button>
+									<button class="btn btn-breez bt-sm ">Submit</button>
+								</div>
+							</div>
+						</div>
 				</div>
+
+							
 
 				<div class="ui-block">
 					<div class="news-feed-form">
@@ -1531,7 +1600,6 @@
 											<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 												<div class="form-group label-floating is-select">
 													<button class="btn btn-grey-light full-width"><center>Save Draft</center></button>
-
 												</div>
 											</div>
 											<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -1668,11 +1736,10 @@
 										<h5>Gallery</h5>
 										<div class="form-group with-icon is-empty">
 											<input class="form-control" type="file" name="multiple[]">
-
 											<i aria-hidden="true">
-													<span class="btn btn-success btn-add full-width" type="button" style="margin: 0px">
-														<span class="fa fa-plus"></span>
-													</span>
+												<span class="btn btn-success btn-add full-width" type="button" style="margin: 0px">
+													<span class="fa fa-plus"></span>
+												</span>
 											</i>
 										</div>
 
@@ -2167,6 +2234,17 @@
 	<script src="js/mediaelement-and-player.min.js"></script>
 	<script src="js/mediaelement-playlist-plugin.min.js"></script>
 
+
+	<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/js/froala_editor.min.js'></script>
+	      <script>
+      $(function() {
+        $('div#froala-editor').froalaEditor({
+          // Include the subscript and superscript buttons.
+          toolbarButtons: ['bold', 'italic', '|', 'indent', 'outdent', 'formatOL', 'formatUL', '|',
+            'insertLink', 'insertImage', 'subscript', 'superscript'],
+        })
+      });
+    </script>
 
 
 	
