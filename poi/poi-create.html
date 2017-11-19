@@ -18,10 +18,21 @@
 		});
 	</script>
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" type="text/css" href="Bootstrap/dist/css/bootstrap-reboot.css">
+
+
 	<link rel="stylesheet" type="text/css" href="Bootstrap/dist/css/bootstrap.css">
+
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+	<script src="js/bootstrap4.min.js"></script>
+
+    <!-- include summernote css/js-->
+    <link rel="stylesheet" type="text/css" href="css/summernote-bs4.css">
+    <script src="js/summernote-bs4.js"></script>
+
+	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" type="text/css" href="Bootstrap/dist/css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="Bootstrap/dist/css/bootstrap-reboot.css">
 
 	<!-- Theme Styles CSS -->
 	<link rel="stylesheet" type="text/css" href="css/theme-styles.css">
@@ -30,8 +41,6 @@
 
 	<!-- Styles for plugins -->
 	<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.min.css">
-	<link rel="stylesheet" type="text/css" href="css/mediaelement-playlist-plugin.min.css">
-	<link rel="stylesheet" type="text/css" href="css/mediaelementplayer.css">
 
 	<!-- Lightbox popup script-->
 	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
@@ -41,8 +50,8 @@
 	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-select.css">
 
-	<script type="text/javascript" src="js/jquery.bootstrap-growl.min.js"></script>
-    
+	
+   
     
 
 </head>
@@ -628,7 +637,8 @@
 
 	<div class="header-spacer"></div>
 
-    	<!-- Top Header -->
+
+	<!-- Top Header -->
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -701,7 +711,203 @@
 	</div>
 	<!-- ... end Top Header -->
 
-    <!-- Window-popup Update Header Photo -->
+    
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-9 order-xl-9 col-lg-9 order-lg-9 col-md-12 order-md-1 col-sm-12 col-xs-12" style="padding-left: 0px;">
+				<div class="ui-block">
+					<div class="row">
+						<div class="col-xl-9 order-xl-1 col-lg-9 order-lg-1 col-md-12 order-md-1 col-sm-12 col-xs-12" >
+							<div class="form-group label-floating ">
+								<input class="form-control bg-white" placeholder="POI Title" style="border: 0px; height: 70px; font-size: 28px">
+								<span class="material-input"></span>
+							</div>
+							<div id="summernote"></div>
+							
+						</div>
+						<div class="col-xl-3 order-xl-2 col-lg-3 order-lg-2 col-md-12 order-md-2 col-sm-12 col-xs-12" style="padding-left: 0px;">
+							<div class="ui-block" style="padding-top: 30px;border: 0px;">
+								<button class="btn btn-breez btn-sm2" data-dismiss="modal" href="#"  aria-expanded="false">
+									Submit
+								</button>
+								<button class="btn btn-border-think btn-transparent btn-sm c-grey">
+									<center>Save Draft</center>
+								</button>
+							</div>
+							<div class="ui-block" style="border-radius: 4px 0px 0px 4px;">
+								<div class="your-profile">
+									<div class="ui-block-title ui-block-title-small">
+										<h6 class="title">POI Post Setting</h6>
+									</div>
+
+									<div id="status-menu" role="tablist" aria-multiselectable="true">
+										<div class="card">
+											<div class="card-header" role="tab" id="status-panel">
+												<h6 class="mb-0">
+													<a data-toggle="collapse" data-parent="#status-menu" href="#status" aria-expanded="true" aria-controls="status">
+														Status
+														<svg class="olymp-dropdown-arrow-icon"><use xlink:href="icons/icons.svg#olymp-dropdown-arrow-icon"></use></svg>
+													</a>
+												</h6>
+											</div>
+
+											<div id="status" class="collapse" role="tabpanel" aria-labelledby="status-panel">
+												<ul class="your-profile-menu">
+													<div class="description-toggle" >
+														<div class="description-toggle-content">
+															Publish
+														</div>
+
+														<div class="togglebutton">
+															<label>
+																<input type="checkbox"><span class="toggle"></span>
+															</label>
+														</div>
+													</div>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+									<div id="kategori-menu" role="tablist" aria-multiselectable="true">
+										<div class="card">
+											<div class="card-header" role="tab" id="kategori-panel">
+												<h6 class="mb-0">
+													<a data-toggle="collapse" data-parent="#kategori-menu" href="#kategori" aria-expanded="true" aria-controls="kategori">
+														Categories & Tag
+														<svg class="olymp-dropdown-arrow-icon"><use xlink:href="icons/icons.svg#olymp-dropdown-arrow-icon"></use></svg>
+													</a>
+												</h6>
+											</div>
+
+											<div id="kategori" class="collapse" role="tabpanel" aria-labelledby="kategori-panel">
+												<ul class="your-profile-menu">
+													<div class="checkbox">
+														<label>
+															<input name="optionsCheckboxes" type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+															Beach
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input name="optionsCheckboxes" checked="" type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+															Mountain
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input name="optionsCheckboxes" checked="" type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+															Asian
+														</label>
+													</div>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+									<div id="feature-img-menu" role="tablist" aria-multiselectable="true">
+										<div class="card">
+											<div class="card-header" role="tab" id="feature-img-panel">
+												<h6 class="mb-0">
+													<a data-toggle="collapse" data-parent="#feature-img-menu" href="#feature-img" aria-expanded="true" aria-controls="feature-img">
+														Featured Image
+														<svg class="olymp-dropdown-arrow-icon"><use xlink:href="icons/icons.svg#olymp-dropdown-arrow-icon"></use></svg>
+													</a>
+												</h6>
+											</div>
+
+											<div id="feature-img" class="collapse" role="tabpanel" aria-labelledby="feature-img-panel">
+												<ul class="your-profile-menu">
+													<label class="btn btn-border-think btn-transparent btn-sm c-grey" for="upload-fi" ><i class="fa fa-upload" aria-hidden="true"></i> Upload</label>
+													<input type="file" id="upload-fi" name="upload" style="display:none">
+												</ul>
+											</div>
+										</div>
+									</div>
+
+									<div id="more-option-menu" role="tablist" aria-multiselectable="true">
+										<div class="card">
+											<div class="card-header" role="tab" id="more-option-panel">
+												<h6 class="mb-0">
+													<a data-toggle="collapse" data-parent="#more-option-menu" href="#more-option" aria-expanded="true" aria-controls="more-option">
+														More Options
+														<svg class="olymp-dropdown-arrow-icon"><use xlink:href="icons/icons.svg#olymp-dropdown-arrow-icon"></use></svg>
+													</a>
+												</h6>
+											</div>
+
+											<div id="more-option" class="collapse" role="tabpanel" aria-labelledby="more-option-panel">
+												<ul class="your-profile-menu">
+													Location
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xl-3 order-xl-3 col-lg-3 order-lg-3 col-md-12 order-md-2 col-sm-12 col-xs-12">
+				<div class="ui-block">
+					<div class="your-profile">
+						<div class="ui-block-title ui-block-title-small">
+							<h6 class="title">Menu</h6>
+						</div>
+						<div class="ui-block-title" style="border-radius: 0;">
+							<a href="poi-create.html" class="h5 title" style="font-size: 14px; font-weight: 100;">Create POI</a>
+						</div>
+						<div class="ui-block-title" style="border-radius: 0;">
+							<a href="poi-draft.html" class="h5 title" style="font-size: 14px; font-weight: 100; ">Draft POI</a>
+						</div>
+						<div class="ui-block-title" style="border-radius: 0;">
+							<a href="poi-submit.html" class="h5 title" style="font-size: 14px; font-weight: 100; ">Submit POI</a>
+						</div>
+					</div>
+				</div>
+				<!-- PERSONAL INFO
+				<div class="ui-block">
+					<div class="ui-block-title">
+						<h6 class="title">Personal Info</h6>
+						<a href="#" class="more"><svg class="olymp-three-dots-icon"><use xlink:href="icons/icons.svg#olymp-three-dots-icon"></use></svg></a>
+					</div>
+					<div class="ui-block-content">
+						<ul class="widget w-personal-info">
+							<li>
+								<span class="title">About Me:</span>
+								<span class="text">Hi, I’m Nadine, I’m 36 and I work as a Traveller
+								</span>
+							</li>
+							<li>
+								<span class="title">Birthday:</span>
+								<span class="text">December 14th, 1980</span>
+							</li>
+						</ul>
+
+						<div class="widget w-socials">
+							<h6 class="title">Other Social Networks:</h6>
+							<a href="#" class="social-item bg-dribbble">
+								<i class="fa fa-instagram" aria-hidden="true"></i>
+								Instagram
+							</a>
+							<a href="#" class="social-item bg-twitter">
+								<i class="fa fa-twitter" aria-hidden="true"></i>
+								Twitter
+							</a>
+						</div>
+					</div>
+				</div>
+				-->
+			</div>
+		</div>
+	</div>
+    
+    <div class="header-spacer"></div>
+
+
+	<!-- Window-popup Update Header Photo -->
 	<div class="modal fade" id="update-header-photo">
 		<div class="modal-dialog ui-block window-popup update-header-photo">
 			<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
@@ -729,7 +935,8 @@
 		</div>
 	</div>
 	<!-- ... end Window-popup Update Header Photo -->
-    
+
+
 	<!-- Window-popup Choose from my Photo -->
 	<div class="modal fade" id="choose-from-my-photo">
 		<div class="modal-dialog ui-block window-popup choose-from-my-photo">
@@ -910,484 +1117,6 @@
 	</div>
 	<!-- ... end Window-popup Choose from my Photo -->
 
-    <!-- Body Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-9 order-xl-9 col-lg-9 order-lg-9 col-md-12 order-md-1 col-sm-12 col-xs-12">
-                <div class="ui-block">
-                    <div class="news-feed-form">
-                        <form class="form-inline search-form" method="post">
-                            <div class="form-group label-floating is-empty">
-                                <label class="control-label">Add POI name here ...  </label>
-                                <input class="form-control bg-white" placeholder="">
-                                <span class="material-input"></span>
-                            </div>
-                            <a href="poi-create.html" class="btn btn-primary btn-lg">Submit Story</a>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="ui-block">
-                    <div class="news-feed-form">
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active inline-items" data-toggle="tab" href="#all-poi" role="tab" aria-expanded="true">
-
-                                    <svg class="olymp-status-icon"><use xlink:href="icons/icons.svg#olymp-status-icon"></use></svg>
-
-                                    <span>All</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link inline-items" data-toggle="tab" href="#draft-poi" role="tab" aria-expanded="false">
-
-                                    <svg class="olymp-multimedia-icon"><use xlink:href="icons/icons.svg#olymp-multimedia-icon"></use></svg>
-
-                                    <span>Draft</span>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link inline-items" data-toggle="tab" href="#submitted-poi" role="tab" aria-expanded="false">
-                                    <svg class="olymp-blog-icon"><use xlink:href="icons/icons.svg#olymp-blog-icon"></use></svg>
-
-                                    <span>Submitted</span>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link inline-items" data-toggle="tab" href="#approved-poi" role="tab" aria-expanded="false">
-                                    <svg class="olymp-blog-icon"><use xlink:href="icons/icons.svg#olymp-calendar-icon"></use></svg>
-
-                                    <span>Approved</span>
-                                </a>
-                            </li>
-                        </ul>
-
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="all-poi" role="tabpanel" aria-expanded="true">
-                                <div class="content-login-regis">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="photo-album-wrapper">
-                                                    <div class="photo-album-item-wrap col-3-width">
-                                                        <div class="photo-album-item" data-mh="album-item">
-                                                            <div class="photo-item">
-                                                                <img src="img/photo-item2.jpg" alt="photo">
-                                                                <div class="overlay overlay-dark"></div>
-                                                                <a href="#" class="more"><svg class="olymp-three-dots-icon"><use xlink:href="icons/icons.svg#olymp-three-dots-icon"></use></svg></a>
-                                                                <a href="#" class="post-add-icon">
-                                                                    <svg class="olymp-heart-icon"><use xlink:href="icons/icons.svg#olymp-heart-icon"></use></svg>
-                                                                    <span>324</span>
-                                                                </a>
-                                                                <a href="#" data-toggle="modal" data-target="#poi-post" class="  full-block"></a>
-                                                            </div>
-
-                                                            <div class="content">
-                                                                <a href="#" class="post-category bg-blue-light">APPROVED</a>
-                                                                <a href="#" class="title h5">Gunung Bromo</a>
-                                                                <span class="sub-title">Last Added: 2 hours ago</span>
-
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="photo-album-item-wrap col-3-width">
-                                                        <div class="photo-album-item" data-mh="album-item">
-                                                            <div class="photo-item">
-                                                                <img src="img/photo-album2.jpg" alt="photo">
-                                                                <div class="overlay overlay-dark"></div>
-                                                                <a href="#" class="more"><svg class="olymp-three-dots-icon"><use xlink:href="icons/icons.svg#olymp-three-dots-icon"></use></svg></a>
-                                                                <a href="#" class="post-add-icon">
-                                                                    <svg class="olymp-heart-icon"><use xlink:href="icons/icons.svg#olymp-heart-icon"></use></svg>
-                                                                    <span>324</span>
-                                                                </a>
-                                                                <a href="#" data-toggle="modal" data-target="#poi-post-edit" class="  full-block"></a>
-
-                                                            </div>
-
-                                                            <div class="content">
-                                                                <a href="#" class="post-category bg-grey-light" style="bottom: 0;">DRAFT</a>
-                                                                <a href="#" data-toggle="modal" data-target="#poi-post-edit" class="post-category bg-primary" style="bottom: 0;">EDIT</a>
-                                                                <a href="#" class="title h5">Labuan Bajo</a>
-                                                                <span class="sub-title">Last Added: 6 mins ago</span>
-
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="photo-album-item-wrap col-3-width">
-                                                        <div class="photo-album-item" data-mh="album-item">
-                                                            <div class="photo-item">
-                                                                <img src="img/photo-album3.jpg" alt="photo">
-                                                                <div class="overlay overlay-dark"></div>
-                                                                <a href="#" class="more"><svg class="olymp-three-dots-icon"><use xlink:href="icons/icons.svg#olymp-three-dots-icon"></use></svg></a>
-                                                                <a href="#" class="post-add-icon">
-                                                                    <svg class="olymp-heart-icon"><use xlink:href="icons/icons.svg#olymp-heart-icon"></use></svg>
-                                                                    <span>324</span>
-                                                                </a>
-                                                                <a href="#" data-toggle="modal" data-target="#poi-post" class="  full-block"></a>
-
-                                                            </div>
-
-                                                            <div class="content">
-                                                                <a href="#" class="post-category bg-breez">SUBMITTED</a>
-
-                                                                <a href="#" class="title h5">Gunung Rinjani</a>
-                                                                <span class="sub-title">Last Added: 16 hours ago</span>
-
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="photo-album-item-wrap col-3-width">
-                                                        <div class="photo-album-item" data-mh="album-item">
-                                                            <div class="photo-item">
-                                                                <img src="img/photo-album4.jpg" alt="photo">
-                                                                <div class="overlay overlay-dark"></div>
-                                                                <a href="#" class="more"><svg class="olymp-three-dots-icon"><use xlink:href="icons/icons.svg#olymp-three-dots-icon"></use></svg></a>
-                                                                <a href="#" class="post-add-icon">
-                                                                    <svg class="olymp-heart-icon"><use xlink:href="icons/icons.svg#olymp-heart-icon"></use></svg>
-                                                                    <span>324</span>
-                                                                </a>
-                                                                <a href="#" data-toggle="modal" data-target="#poi-post" class="  full-block"></a>
-
-                                                            </div>
-
-                                                            <div class="content">
-
-                                                                <a href="#" class="post-category bg-breez">SUBMITTED</a>
-
-                                                                <a href="#" class="title h5">Labuan Cermin</a>
-                                                                <span class="sub-title">Last Added: 1 days ago</span>
-
-
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="photo-album-item-wrap col-3-width">
-                                                        <div class="photo-album-item" data-mh="album-item">
-                                                            <div class="photo-item">
-                                                                <img src="img/photo-item6.jpg" alt="photo">
-                                                                <div class="overlay overlay-dark"></div>
-                                                                <a href="#" class="more"><svg class="olymp-three-dots-icon"><use xlink:href="icons/icons.svg#olymp-three-dots-icon"></use></svg></a>
-                                                                <a href="#" class="post-add-icon">
-                                                                    <svg class="olymp-heart-icon"><use xlink:href="icons/icons.svg#olymp-heart-icon"></use></svg>
-                                                                    <span>324</span>
-                                                                </a>
-                                                                <a href="#" data-toggle="modal" data-target="#poi-post" class="  full-block"></a>
-
-                                                            </div>
-
-                                                            <div class="content">
-                                                                <a href="#" class="post-category bg-breez">SUBMITTED</a>
-
-                                                                <a href="#" class="title h5">Danau Toba</a>
-                                                                <span class="sub-title">Last Added: 2 days ago</span>
-
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="photo-album-item-wrap col-3-width">
-                                                        <div class="photo-album-item" data-mh="album-item">
-                                                            <div class="photo-item">
-                                                                <img src="img/photo-album5.jpg" alt="photo">
-                                                                <div class="overlay overlay-dark"></div>
-                                                                <a href="#" class="more"><svg class="olymp-three-dots-icon"><use xlink:href="icons/icons.svg#olymp-three-dots-icon"></use></svg></a>
-                                                                <a href="#" class="post-add-icon">
-                                                                    <svg class="olymp-heart-icon"><use xlink:href="icons/icons.svg#olymp-heart-icon"></use></svg>
-                                                                    <span>324</span>
-                                                                </a>
-                                                                <a href="#" data-toggle="modal" data-target="#poi-post-edit" class="  full-block"></a>
-
-                                                            </div>
-
-                                                            <div class="content">
-                                                                <a href="#" class="post-category bg-grey-light">DRAFT</a>
-                                                                <a href="#" data-toggle="modal" data-target="#poi-post-edit" class="post-category bg-primary" style="bottom: 0;">EDIT</a>
-
-                                                                <a href="#" class="title h5">Pulau Derawan</a>
-                                                                <span class="sub-title">Last Added: 4 day ago</span>
-
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane" id="draft-poi" role="tabpanel" aria-expanded="true">
-                                <div class="content-login-regis">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="photo-album-wrapper">
-                                                    <div class="photo-album-item-wrap col-3-width">
-                                                        <div class="photo-album-item" data-mh="album-item">
-                                                            <div class="photo-item">
-                                                                <img src="img/photo-album2.jpg" alt="photo">
-                                                                <div class="overlay overlay-dark"></div>
-                                                                <a href="#" class="more"><svg class="olymp-three-dots-icon"><use xlink:href="icons/icons.svg#olymp-three-dots-icon"></use></svg></a>
-                                                                <a href="#" class="post-add-icon">
-                                                                    <svg class="olymp-heart-icon"><use xlink:href="icons/icons.svg#olymp-heart-icon"></use></svg>
-                                                                    <span>324</span>
-                                                                </a>
-                                                                <a href="#" data-toggle="modal" data-target="#poi-post-edit" class="  full-block"></a>
-
-                                                            </div>
-
-                                                            <div class="content">
-                                                                <a href="#" class="post-category bg-grey-light" style="bottom: 0;">DRAFT</a>
-                                                                <a href="#" data-toggle="modal" data-target="#poi-post-edit" class="post-category bg-primary" style="bottom: 0;">EDIT</a>
-                                                                <a href="#" class="title h5">Labuan Bajo</a>
-                                                                <span class="sub-title">Last Added: 6 mins ago</span>
-
-
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="photo-album-item-wrap col-3-width">
-                                                        <div class="photo-album-item" data-mh="album-item">
-                                                            <div class="photo-item">
-                                                                <img src="img/photo-album5.jpg" alt="photo">
-                                                                <div class="overlay overlay-dark"></div>
-                                                                <a href="#" class="more"><svg class="olymp-three-dots-icon"><use xlink:href="icons/icons.svg#olymp-three-dots-icon"></use></svg></a>
-                                                                <a href="#" class="post-add-icon">
-                                                                    <svg class="olymp-heart-icon"><use xlink:href="icons/icons.svg#olymp-heart-icon"></use></svg>
-                                                                    <span>324</span>
-                                                                </a>
-                                                                <a href="#" data-toggle="modal" data-target="#poi-post-edit" class="  full-block"></a>
-
-                                                            </div>
-
-                                                            <div class="content">
-                                                                <a href="#" class="post-category bg-grey-light">DRAFT</a>
-                                                                <a href="#" data-toggle="modal" data-target="#poi-post-edit" class="post-category bg-primary" style="bottom: 0;">EDIT</a>
-
-                                                                <a href="#" class="title h5">Pulau Derawan</a>
-                                                                <span class="sub-title">Last Added: 4 day ago</span>
-
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane" id="submitted-poi" role="tabpanel" aria-expanded="true">
-                                <div class="content-login-regis">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="photo-album-wrapper">
-
-
-                                                    <div class="photo-album-item-wrap col-3-width">
-                                                        <div class="photo-album-item" data-mh="album-item">
-                                                            <div class="photo-item">
-                                                                <img src="img/photo-album3.jpg" alt="photo">
-                                                                <div class="overlay overlay-dark"></div>
-                                                                <a href="#" class="more"><svg class="olymp-three-dots-icon"><use xlink:href="icons/icons.svg#olymp-three-dots-icon"></use></svg></a>
-                                                                <a href="#" class="post-add-icon">
-                                                                    <svg class="olymp-heart-icon"><use xlink:href="icons/icons.svg#olymp-heart-icon"></use></svg>
-                                                                    <span>324</span>
-                                                                </a>
-                                                                <a href="#" data-toggle="modal" data-target="#poi-post" class="  full-block"></a>
-
-                                                            </div>
-
-                                                            <div class="content">
-                                                                <a href="#" class="post-category bg-breez">SUBMITTED</a>
-
-                                                                <a href="#" class="title h5">Gunung Rinjani</a>
-                                                                <span class="sub-title">Last Added: 16 hours ago</span>
-
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="photo-album-item-wrap col-3-width">
-                                                        <div class="photo-album-item" data-mh="album-item">
-                                                            <div class="photo-item">
-                                                                <img src="img/photo-album4.jpg" alt="photo">
-                                                                <div class="overlay overlay-dark"></div>
-                                                                <a href="#" class="more"><svg class="olymp-three-dots-icon"><use xlink:href="icons/icons.svg#olymp-three-dots-icon"></use></svg></a>
-                                                                <a href="#" class="post-add-icon">
-                                                                    <svg class="olymp-heart-icon"><use xlink:href="icons/icons.svg#olymp-heart-icon"></use></svg>
-                                                                    <span>324</span>
-                                                                </a>
-                                                                <a href="#" data-toggle="modal" data-target="#poi-post" class="  full-block"></a>
-
-                                                            </div>
-
-                                                            <div class="content">
-
-                                                                <a href="#" class="post-category bg-breez">SUBMITTED</a>
-
-                                                                <a href="#" class="title h5">Labuan Cermin</a>
-                                                                <span class="sub-title">Last Added: 1 days ago</span>
-
-
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="photo-album-item-wrap col-3-width">
-                                                        <div class="photo-album-item" data-mh="album-item">
-                                                            <div class="photo-item">
-                                                                <img src="img/photo-item6.jpg" alt="photo">
-                                                                <div class="overlay overlay-dark"></div>
-                                                                <a href="#" class="more"><svg class="olymp-three-dots-icon"><use xlink:href="icons/icons.svg#olymp-three-dots-icon"></use></svg></a>
-                                                                <a href="#" class="post-add-icon">
-                                                                    <svg class="olymp-heart-icon"><use xlink:href="icons/icons.svg#olymp-heart-icon"></use></svg>
-                                                                    <span>324</span>
-                                                                </a>
-                                                                <a href="#" data-toggle="modal" data-target="#poi-post" class="  full-block"></a>
-
-                                                            </div>
-
-                                                            <div class="content">
-                                                                <a href="#" class="post-category bg-breez">SUBMITTED</a>
-
-                                                                <a href="#" class="title h5">Danau Toba</a>
-                                                                <span class="sub-title">Last Added: 2 days ago</span>
-
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane" id="approved-poi" role="tabpanel" aria-expanded="true">
-                                <div class="content-login-regis">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="photo-album-wrapper">
-
-                                                    <div class="photo-album-item-wrap col-3-width">
-                                                        <div class="photo-album-item" data-mh="album-item">
-                                                            <div class="photo-item">
-                                                                <img src="img/photo-item2.jpg" alt="photo">
-                                                                <div class="overlay overlay-dark"></div>
-                                                                <a href="#" class="more"><svg class="olymp-three-dots-icon"><use xlink:href="icons/icons.svg#olymp-three-dots-icon"></use></svg></a>
-                                                                <a href="#" class="post-add-icon">
-                                                                    <svg class="olymp-heart-icon"><use xlink:href="icons/icons.svg#olymp-heart-icon"></use></svg>
-                                                                    <span>324</span>
-                                                                </a>
-                                                                <a href="#" data-toggle="modal" data-target="#poi-post" class="  full-block"></a>
-
-                                                            </div>
-
-                                                            <div class="content">
-                                                                <a href="#" class="post-category bg-blue-light">APPROVED</a>
-                                                                <a href="#" class="title h5">Gunung Bromo</a>
-                                                                <span class="sub-title">Last Added: 2 hours ago</span>
-
-
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <a id="load-more-button" href="#" class="btn btn-control btn-more" data-load-link="items-to-load.html" data-container="newsfeed-items-grid"><svg class="olymp-three-dots-icon"><use xlink:href="icons/icons.svg#olymp-three-dots-icon"></use></svg></a>
-
-            </div>
-
-            <div class="col-xl-3 order-xl-3 col-lg-3 order-lg-3 col-md-12 order-md-2 col-sm-12 col-xs-12">
-                <div class="ui-block">
-                    <div class="your-profile">
-                        <div class="ui-block-title ui-block-title-small">
-                            <h6 class="title">Menu</h6>
-                        </div>
-                        <div class="ui-block-title" style="border-radius: 0;">
-                            <a href="poi-create.html" class="h5 title" style="font-size: 14px; font-weight: 100;">Create POI</a>
-                        </div>
-                        <div class="ui-block-title" style="border-radius: 0;">
-                            <a href="poi-draft.html" class="h5 title" style="font-size: 14px; font-weight: 100; ">Draft POI</a>
-                        </div>
-                        <div class="ui-block-title" style="border-radius: 0;">
-                            <a href="poi-submit.html" class="h5 title" style="font-size: 14px; font-weight: 100; ">Submit POI</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- PERSONAL INFO
-                <div class="ui-block">
-                    <div class="ui-block-title">
-                        <h6 class="title">Personal Info</h6>
-                        <a href="#" class="more"><svg class="olymp-three-dots-icon"><use xlink:href="icons/icons.svg#olymp-three-dots-icon"></use></svg></a>
-                    </div>
-                    <div class="ui-block-content">
-                        <ul class="widget w-personal-info">
-                            <li>
-                                <span class="title">About Me:</span>
-                                <span class="text">Hi, I’m Nadine, I’m 36 and I work as a Traveller
-                                </span>
-                            </li>
-                            <li>
-                                <span class="title">Birthday:</span>
-                                <span class="text">December 14th, 1980</span>
-                            </li>
-                        </ul>
-
-                        <div class="widget w-socials">
-                            <h6 class="title">Other Social Networks:</h6>
-                            <a href="#" class="social-item bg-dribbble">
-                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                                Instagram
-                            </a>
-                            <a href="#" class="social-item bg-twitter">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                Twitter
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                -->
-            </div>
-        </div>
-    </div>
-    <!-- ... end Body Content -->
 
 	<!-- Window-popup Create Event -->
 	<div class="modal fade" id="create-poi">
@@ -2064,14 +1793,12 @@
 	<!-- ... end Window-popup Create Event -->
 
 
-
-       
-	<!-- jQuery first, then Other JS. -->
-	<script src="js/jquery-3.2.0.min.js"></script>
 	<!-- Js effects for material design. + Tooltips -->
 	<script src="js/material.min.js"></script>
+
 	<!-- Helper scripts (Tabs, Equal height, Scrollbar, etc) -->
-	<script src="js/theme-plugins.js"></script>
+	<script src="js/theme-plugins-note.js"></script>
+
 	<!-- Init functions -->
 	<script src="js/main.js"></script>
 
@@ -2083,10 +1810,20 @@
 
 	<!-- Lightbox popup script-->
 	<script src="js/jquery.magnific-popup.min.js"></script>
-
-	<script src="js/mediaelement-and-player.min.js"></script>
-	<script src="js/mediaelement-playlist-plugin.min.js"></script>
     
+    <!-- Summernote-->
+
+
+	<script type="text/javascript" src="js/jquery.bootstrap-growl.min.js"></script>
+
+    
+     <script>
+      $('#summernote').summernote({
+        placeholder: 'Create Story...',
+        tabsize: 2,
+        height: 500
+      });
+    </script>
 
 	<script type="text/javascript">
 		$( document ).on( 'click', '.btn-add', function ( event ) {
@@ -2112,15 +1849,6 @@
 		} );
 	</script>
 
-	<script type="text/javascript">
-		$('.btn').on('click', function() {
-		    var $this = $(this);
-		  $this.button('loading');
-		    setTimeout(function() {
-		       $this.button('reset');
-		   }, 8000);
-		});
-    </script>
     
     
 

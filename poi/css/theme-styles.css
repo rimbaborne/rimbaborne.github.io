@@ -2406,7 +2406,7 @@ p {
 .card-header i, .card-header svg {
   float: right;
   transition: all .3s ease;
-  margin-top: 8px; }
+  margin-top: 0px; }
 
 .card-header .collapsed i {
   transform: rotate(-90deg); }
